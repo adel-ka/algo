@@ -1,0 +1,29 @@
+ALGORITHM EX1
+VAR
+     mots:STRING;
+  long_ch:INTEGER=0;
+   nbr_vo:INTEGER=0;
+   nbr_wo:INTEGER=1;
+
+    
+
+BEGIN
+  Write("entrer votre mot");
+  Read(mots);
+  WHILE (mots[i]<>".") DO
+    long_ch++;
+    i++;
+    IF (mots[i]=" ") THEN
+    nbr_wo++;
+
+    END_IF
+    IF (mots[i]="o" OR mots[i]="i" OR mots[i]="e" OR mots[i]="u" OR mots[i]="a" OR mots[i]="O" OR mots[i]="I" OR mots[i]="E" OR mots[i]="U" OR mots[i]="A"   ) THEN
+        nbr_vo++;
+    END_IF
+  END_WHILE
+   Write("long de mots = ",long_ch);
+   Write(" nombre de words",nbr_wo);
+   Write("nombre de vowels",nbr_vo);
+END
+
+
