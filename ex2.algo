@@ -1,0 +1,36 @@
+ALGORITHM algo task2
+VAR
+ set1,set2 : ARRAY_OF INTEGER;
+ check:BOOLEAN
+ sum=0
+BEGIN
+    FOR i FROM 0 TO set1.length-1 STEP step  DO
+    check:=false
+        FOR g FROM 0 TO set2.lenght-1 STEP step  DO
+        IF (set1[i]=set2[g]) THEN
+            check:=true Break 
+        END_IF
+       
+            
+        END_FOR
+         IF (check=false) THEN
+            sum:=sum+set1[i] 
+        END_IF
+    END_FOR
+    FOR g FROM 0 TO set2.length-1 STEP step  DO
+    check:=false
+        FOR i FROM 0 TO set1.lenght-1 STEP step  DO
+        IF (set2[g]=set1[i]) THEN
+            check:=true Break 
+        END_IF
+       
+            
+        END_FOR
+         IF (check=false) THEN
+            sum:=sum+set2[g] 
+        END_IF
+    END_FOR
+    Write(sum)
+    
+    
+END
