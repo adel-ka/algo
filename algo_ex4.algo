@@ -1,0 +1,18 @@
+ALGORITHM palindrome
+VAR
+    word:STRING; test:BOOLEAN;
+BEGIN
+    IF (word.length<=1) THEN
+          test:=true;
+             Write(word,"is palindrome word");
+      
+    END_IF
+    IF (word[0]<>word[-1]) THEN
+
+        test:= false;
+                     Write(word,"isn't palindrome word");
+
+    END_IF
+                  palindrome(word[1:-1])
+
+END

@@ -1,0 +1,22 @@
+PROCEDURE sort(x,y:INTEGER)
+VAR
+        z:INTEGER;
+BEGIN
+        z:=x ;
+        x:=y;
+        y:=z;
+END
+
+ALGORITHM tri
+VAR
+    tab:ARRAY_OF INTEGER;
+    i,j: INTEGER;
+BEGIN
+    FOR i FROM 0 TO tab.lenght-1 STEP step  DO
+        j:=i;
+        WHILE (j>0 AND tab[j-1]>tab[j]) DO
+            sort(tab[j],tab[j-1])
+            j--;
+        END_WHILE
+    END_FOR
+END
